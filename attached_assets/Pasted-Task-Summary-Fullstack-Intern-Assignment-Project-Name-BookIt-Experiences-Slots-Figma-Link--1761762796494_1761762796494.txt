@@ -1,0 +1,56 @@
+Task Summary: Fullstack Intern Assignment 
+Project Name: BookIt: Experiences & Slots 
+Figma Link:  
+Objective: 
+Build a complete end-to-end web application where users can explore travel experiences, 
+select available slots, and complete bookings. The goal is to test both frontend and backend 
+skills, focusing on real-world fullstack workflows, API integration, and clean UI design. 
+Requirements 
+Frontend 
+1. Framework: React + TypeScript (Vite or Next.js recommended) 
+2. Styling: TailwindCSS (mandatory) 
+3. Pages to Build: 
+○ Home Page: List experiences fetched from backend. 
+○ Details Page: Show selected experience details, available dates and slots. 
+○ Checkout Page: Collect user info, promo code, and display price summary. 
+○ Result Page: Display booking confirmation or failure message. 
+4. UX/UI Requirements: 
+○ Must be responsive and mobile-friendly. 
+○ Clean, consistent spacing and typography. 
+○ Provide clear feedback (loading, success, failure, sold-out states, etc.). 
+5. Frontend Logic: 
+○ Consume backend APIs using Axios or Fetch. 
+○ Manage state cleanly using React hooks. 
+○ Implement minimal form validation (email, name, etc.). 
+6. Design Fidelity: 
+○ The frontend must match the provided Figma design exactly across desktop, 
+mobile breakpoints, including spacing, typography scale, colors, and component 
+states. 
+Backend 
+1. Framework: Node.js with Express or NestJS. 
+2. Database: PostgreSQL, MySQL, or MongoDB. 
+3. API Endpoints (minimum): 
+○ GET /experiences - Return list of experiences. 
+○ GET /experiences/:id - Return details and slot availability. 
+○ POST /bookings - Accept booking details and store them. 
+○ POST /promo/validate - Validate promo codes (e.g. SAVE10, FLAT100). 
+4. Data Handling: 
+○ Store data in the database. 
+○ Ensure validation for required fields. 
+○ Prevent double-booking for the same slot. 
+Integration Flow 
+● Frontend should fetch experiences from backend APIs. 
+● Full flow should work as: Home → Details → Checkout → Result. 
+● Data (like experiences, slots, and booking confirmation) must be dynamic. 
+Deliverables 
+● Use freely available experience data and royalty-free images (e.g., from Unsplash, 
+Pexels, or similar sources) to populate the application. 
+● Build a complete working fullstack project covering the entire booking flow from browsing 
+to confirmation. 
+● The project must be hosted on a cloud platform such as Render, Railway, Vercel, or 
+AWS for live review. This is mandatory. 
+● Provide a clear and complete README file with setup and run instructions. 
+● Submit both the hosted application link and the GitHub repository link. 
+Figma Link : 
+https://www.figma.com/design/8X6E1Ev8YdtZ3erV0Iifvb/HD-booking?node-id=0
+1&p=f&t=K4scwnxfIH
