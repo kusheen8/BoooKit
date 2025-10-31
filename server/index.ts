@@ -34,7 +34,7 @@ app.use(express.json({
 app.use(express.urlencoded({ extended: false }));
 
 if (process.env.NODE_ENV === "production") {
-  const clientPath = path.join(__dirname, "../client/dist");
+  const clientPath = path.resolve(process.cwd(), "client/dist");
   app.use(express.static(clientPath));
 
   app.get("*", (req, res) => {
