@@ -2,8 +2,8 @@ import { QueryClient } from "@tanstack/react-query";
 
 const API_BASE_URL = 
   typeof window !== "undefined" && window.location.hostname === "localhost"
-    ? "http://localhost:5000" 
-    : "";
+    ? "http://localhost:5000"  
+    : "";                     
 
 // ✅ helper function to throw error if response not OK
 async function throwIfResNotOk(res: Response) {
@@ -29,6 +29,7 @@ export async function apiRequest(
   return res;
 }
 
+export { API_BASE_URL };
 
 // ✅ define behavior for 401 errors
 type UnauthorizedBehavior = "returnNull" | "throw";

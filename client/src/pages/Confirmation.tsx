@@ -3,6 +3,8 @@ import { useRoute, useLocation } from "wouter";
 import { CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 import type { Booking } from "@shared/schema";
+import { API_BASE_URL } from "@/lib/queryClient";
+
 
 export default function Confirmation() {
   const [, params] = useRoute("/confirmation/:bookingId");
@@ -12,7 +14,7 @@ export default function Confirmation() {
   const { data: booking, isLoading } = useQuery<Booking>({
     queryKey: ["/api/bookings", bookingId],
     queryFn: async () => {
-      const response = await fetch(`http://localhost:5000/api/bookings/${bookingId}`);
+      const response = await fetch(`${API_BASE_URL}/api/bookings/${bookingId}`);
       if (!response.ok) throw new Error("Failed to fetch booking");
       return response.json();
     },
