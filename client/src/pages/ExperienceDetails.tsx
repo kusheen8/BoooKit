@@ -10,6 +10,12 @@ export default function ExperienceDetails() {
   const [, setLocation] = useLocation();
   const experienceId = params?.id;
 
+  const API_BASE_URL =
+    window.location.hostname === "localhost"
+      ? "http://localhost:5000"
+      : "";
+
+
   const [selectedDate, setSelectedDate] = useState("");
   const [selectedTime, setSelectedTime] = useState("");
   const [quantity, setQuantity] = useState(1);
@@ -17,7 +23,7 @@ export default function ExperienceDetails() {
   const { data: experience, isLoading } = useQuery<Experience>({
     queryKey: ["/api/experiences", experienceId],
     queryFn: async () => {
-      const response = await fetch(`http://localhost:5000/api/experiences/${params.id}`);
+      const response = await fetch(`${API_BASE_URL}/api/experiences/${params.id}`);
       if (!response.ok) throw new Error("Failed to fetch experience");
       return response.json();
     },
@@ -102,7 +108,7 @@ export default function ExperienceDetails() {
         {/* Hero Image */}
         <div className="relative w-full h-96 md:h-[500px] lg:h-[600px] rounded-2xl overflow-hidden mb-8">
           <img
-            src={`http://localhost:5000/${experience.imageUrl}`}
+            src={`${API_BASE_URL}${experience.imageUrl}`}
             alt={experience.name}
             className="w-full h-full object-cover"
           />
