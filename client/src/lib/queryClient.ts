@@ -1,10 +1,9 @@
 import { QueryClient } from "@tanstack/react-query";
 
-const API_BASE_URL =
-  import.meta.env.MODE === "development"
-    ? "http://localhost:5000"
-    : ""; // for production (Vercel)
-
+const API_BASE_URL = 
+  typeof window !== "undefined" && window.location.hostname === "localhost"
+    ? "http://localhost:5000" 
+    : "";
 
 // ✅ helper function to throw error if response not OK
 async function throwIfResNotOk(res: Response) {

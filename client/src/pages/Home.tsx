@@ -9,8 +9,10 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const [searchQuery, setSearchQuery] = useState("");
 
-  const API_BASE_URL = "http://localhost:5000";
-
+const API_BASE_URL = 
+  window.location.hostname === "localhost" 
+    ? "http://localhost:5000" 
+    : "";
   const { data: experiences, isLoading } = useQuery<Experience[]>({
     queryKey: ["/api/experiences", searchQuery],
     queryFn: async () => {
