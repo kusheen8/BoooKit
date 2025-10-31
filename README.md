@@ -101,24 +101,6 @@ npm start
 
 ---
 
-## 📁 **Project Structure**
-
-```bash
-boookit/
-├── client/            # React frontend (TypeScript + Tailwind)
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── lib/
-├── server/            # Express backend
-│   ├── routes/
-│   └── index.ts
-├── db/                # Database schemas
-└── package.json       # Root dependencies
-```
-
----
-
 ## 🎯 **How It Works**
 
 1. 🧭 User browses available experiences
@@ -154,6 +136,4 @@ If you liked this project, please consider ⭐ **starring** the repo on GitHub!
 It helps support further open-source adventure projects 🌊⛰️
 
 ---
-
-Would you like me to add **“📸 Screenshots”** and **“📜 License”** sections (stylized like this) so it looks 100% complete for GitHub’s trending section?
 
